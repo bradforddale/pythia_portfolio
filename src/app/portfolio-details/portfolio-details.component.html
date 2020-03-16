@@ -1,1 +1,44 @@
-<h1>{{selectedPortfolio.personalInfo.fullname}}</h1>
+<div *ngIf="!!selectedPortfolio">
+    <h1>{{selectedPortfolio.personalInfo.fullname}}</h1>
+
+    <table style="padding-bottom: 1rem;">
+        <tr>
+            <td>Full name</td>
+            <td>{{selectedPortfolio.personalInfo.fullname}}</td>
+        </tr>
+        <tr>
+            <td>Cell</td>
+            <td>{{selectedPortfolio.personalInfo.cell}}</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>{{selectedPortfolio.personalInfo.email}}</td>
+        </tr>    
+    </table>
+
+    <table style="padding-bottom: 1rem;">
+        <tr>
+            <th>Award</th>
+            <th>Achieved</th>
+        </tr>
+        <tr *ngFor="let award of selectedPortfolio.awardAchieveds">
+            <td>{{award.description}}</td>
+            <td>{{award.dateAchieved | date:'dd/MM/yyyy'}}</td>
+        </tr>
+    
+    </table>
+
+    <table>
+        <tr>
+            <th>Position</th>
+            <th>Club</th>
+            <th>Held</th>
+        </tr>
+        <tr *ngFor="let award of selectedPortfolio.positions">
+            <td>{{award.clubPosition}}</td>
+            <td>{{award.club}}</td>
+            <td>{{award.dateStarted | date:'dd/MM/yyyy'}} - {{award.dateEnded | date:'dd/MM/yyyy'}}</td>
+        </tr>
+    
+    </table>
+</div>
