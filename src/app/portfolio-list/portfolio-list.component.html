@@ -2,7 +2,7 @@
 <ul>
     <li *ngFor="let port of portfolios" >
         <a routerLink="/details/{{port.id}}">
-            {{port.fullname}}
+            {{port.personalInfo.fullname}}
         </a>
     </li>
 </ul>

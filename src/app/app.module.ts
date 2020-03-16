@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { PortfolioDetailsComponent } from './portfolio-details/portfolio-details.component';
 import { PortfolioListComponent } from './portfolio-list/portfolio-list.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule }    from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
