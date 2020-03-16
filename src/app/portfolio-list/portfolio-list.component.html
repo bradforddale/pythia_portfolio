@@ -1,6 +1,8 @@
 <h1>Portfolios</h1>
 <ul>
-    <li *ngFor="let port of portfolios">
-        {{port.fullname}}
+    <li *ngFor="let port of portfolios" >
+        <span routerLink="/detail/{{port.id}}"> 
+            {{port.fullname}}
+        </span>
     </li>
 </ul>
