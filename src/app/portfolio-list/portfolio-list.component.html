@@ -1,2 +1,6 @@
-<p>portfolio-list works!</p>
-<p>{{porfolios}}</p>
+<h1>Portfolios</h1>
+<ul>
+    <li *ngFor="let port of portfolios">
+        {{port.fullname}}
+    </li>
+</ul>
